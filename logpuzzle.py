@@ -37,6 +37,7 @@ html_template = """
 
 
 def url_sort_func(url_list):
+    """Sorts URLs based on last section of letters"""
     sort_list = re.search(r'(/p-\w+-)(\w*)', url_list)
     return sort_list.group(2)
 
